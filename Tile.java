@@ -6,8 +6,7 @@ public class Tile
 
     public Tile() 
     {
-        Random letter = new Random();
-        this.generateLetter = generateLetter;
+        this.letter = generateLetter(); 
     }
 
     public Tile(char c) 
@@ -18,7 +17,7 @@ public class Tile
     private char generateLetter() 
     {
         Random random = new Random();
-        // the ASCII value of ‘A’ is 65 and ‘Z’ is 90
+        // the ASCII value of 'A' is 65 and 'Z' is 90
         return (char) (random.nextInt(26) + 'A');
     }
 
