@@ -2,18 +2,23 @@ import java.util.Random;
 
 public class Tile 
 {
+
+    // variables
     private char letter;
 
+    // sets the letter to a random uppercase letter
     public Tile() 
     {
         this.letter = generateLetter(); 
     }
 
+    // sets the letter to a specific character
     public Tile(char c) 
     {
         this.letter = c;
     }
 
+    // generates a random uppercase letter from A to Z
     private char generateLetter() 
     {
         Random random = new Random();
@@ -21,6 +26,7 @@ public class Tile
         return (char) (random.nextInt(26) + 'A');
     }
 
+    // returns the letter on the tile
     public char getLetter() 
     {
         return letter;
